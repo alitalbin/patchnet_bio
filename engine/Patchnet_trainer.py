@@ -76,20 +76,7 @@ class Trainer(BaseTrainer):
             print('Epoch: {:3}, iter: {:5}, loss: {:.5}, acc: {:.5}'.\
                 format(epoch, epoch * len(self.trainloader) + i, \
                 self.train_loss_metric.avg, self.train_acc_metric.avg))
-            
-            # with open('training_metrics.csv', 'a') as myfile:
-            #     writer = csv.writer(myfile, delimiter =',')
-               
-            #     writer.writerow([epoch, self.train_loss_metric.avg, self.train_acc_metric.avg, self.val_loss_metric, self.val_acc_metric])
-            # # metrics = {
-            #     'epoch': epoch,
-            #     "train_loss_history": self.train_loss_metric.avg,
-            #     "train_accuracy_history": self.train_acc_metric.avg,
-            #     "val_loss_history": self.val_loss_metric,
-            #     "val_accuracy_history": self.val_acc_metric,
-            # }
-
-            # torch.save(metrics, 'training_metrics.pth')
+     
         
         if self.lr_scheduler is not None:
             self.lr_scheduler.step()

@@ -4,9 +4,9 @@ device: 'cpu'
 seed: 42
 dataset:
   name: 'zalo'
-  root: 'C:\Users\alitu\Desktop\biometric\Implementation-patchnet\datasets'
+  root: 'datasets_retina'
   augmentation:
-    rand_crop_size: 224
+    rand_crop_size: 160
     rand_hori_flip: 0.5
     rand_rotation: 20
   train_set: 'train.csv'
@@ -23,7 +23,7 @@ train:
   batch_size: 15
   optimizer: 'adam'
   lr: 0.002
-  num_epochs: 100
+  num_epochs: 200
 
 val:
   batch_size: 15

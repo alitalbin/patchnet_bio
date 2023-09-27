@@ -23,8 +23,8 @@ class FASDataset(Dataset):
     def __getitem__(self, index):
         img_name = self.data.iloc[index, 1]
         label = self.data.iloc[index, 2]
-        print(self.root_dir)
-        print(img_name)
+        # print(self.root_dir)
+        # print(img_name)
         img_name = os.path.join(self.root_dir, "images", img_name)
         
         img = Image.open(img_name)
